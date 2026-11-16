@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+
+    <center>
+        <h1>Selamat Datang, Member😹</h1>
+        <button onclick="gantiNama(event)">Masukan Nama</button>
+    </center>
+
+    <script type="text/javascript">
+        const namaMember = document.querySelector('h1');
+
+        const namaTersimpan = localStorage.getItem('nama');
+        if (namaTersimpan) {
+            namaMember.innerHTML = 'Halo ' + namaTersimpan + '!';
+        }
+
+        function gantiNama(e) {
+            let nama = prompt('Masukan nama anda: ');
+            if (nama && nama.trim() !== "") {
+                localStorage.setItem('nama', nama);
+                namaMember.innerHTML = 'Halo ' + nama + '!';
+            }else {
+                alert('Nama tidak boleh titik');
+            }
+            e.preventDefault();
+        }
+    </script>
+    
+</body>
+</html>

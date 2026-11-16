@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiv Web Design</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) {
+            img {
+                width: 200px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Menggunakan media query CSS 3</h1>
+    <div class="logo">
+        <img src="../image/logo-uns-biru.png" alt="">
+    </div>
+
+</body>
+</html>
